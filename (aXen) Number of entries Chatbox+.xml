@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin name="(aXen) Number of entries Chatbox+" version_long="20000" version_human="2.0.0" author="aXenDev" website="https://axendev.net/" update_check="https://1shot2kill.pl/aXen/myapps/numberEntriesChatboxPlus/check.php"><hooks><hook type="S" class="\IPS\Theme\class_core_front_profile" filename="numberChatboxPlusProfile"><![CDATA[//<?php
+
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !\defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	exit;
+}
+
+class hook501 extends _HOOK_CLASS_
+{
+
+/* !Hook Data - DO NOT REMOVE */
+public static function hookData() {
+ return array_merge_recursive( array (
+  'hovercard' => 
+  array (
+    0 => 
+    array (
+      'selector' => 'div.cUserHovercard > div.cUserHovercard_data > ul.ipsDataList.ipsDataList_reducedSpacing > li:nth-child(1)',
+      'type' => 'add_inside_end',
+      'content' => '{{if settings.aXenNumberChatboxPlusHovercard}}
+	{{$aXenChatboxPlusCount = \IPS\Db::i()->select(\'COUNT(chat_id)\', \'chatbox_room_posts\', array( \'chat_member_id=?\', $member->member_id ) )->first(); }}
+	<li class="ipsDataItem">
+		<span class="ipsDataItem_generic ipsDataItem_size3"><strong>{lang="aXenNumberChatboxPlus_title"}</strong></span>
+		<span class="ipsDataItem_main">{number="$aXenChatboxPlusCount"}</span>
+	</li>
+{{endif}}',
+    ),
+  ),
+  'profileHeader' => 
+  array (
+    0 => 
+    array (
+      'selector' => '#elProfileStats > ul.ipsList_reset.ipsFlex.ipsFlex-ai:center.ipsFlex-fw:wrap.ipsPos_left.ipsResponsive_noFloat > li:nth-child(1)',
+      'type' => 'add_inside_end',
+      'content' => '{{if settings.aXenNumberChatboxPlusProfileHeader}}
+	{{$aXenChatboxPlusCount = \IPS\Db::i()->select(\'COUNT(chat_id)\', \'chatbox_room_posts\', array( \'chat_member_id=?\', $member->member_id ) )->first(); }}
+	<li>
+		<h4 class="ipsType_minorHeading">{lang="aXenNumberChatboxPlus_title"}</h4>
+			{number="$aXenChatboxPlusCount"}
+	</li>
+{{endif}}',
+    ),
+  ),
+), parent::hookData() );
+}
+/* End Hook Data */
+
+
+}
+]]></hook><hook type="S" class="\IPS\Theme\class_forums_front_topics" filename="numberChatboxPlusTopic"><![CDATA[//<?php
+
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !\defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	exit;
+}
+
+class hook502 extends _HOOK_CLASS_
+{
+
+/* !Hook Data - DO NOT REMOVE */
+public static function hookData() {
+ return array_merge_recursive( array (
+  'postContainer' => 
+  array (
+    0 => 
+    array (
+      'selector' => 'article > aside.ipsComment_author.cAuthorPane.ipsColumn.ipsColumn_medium.ipsResponsive_hidePhone > ul.cAuthorPane_info.ipsList_reset',
+      'type' => 'add_inside_end',
+      'content' => '{{if settings.aXenNumberChatboxPlusTopic}}
+	{{$aXenChatboxPlusCount = \IPS\Db::i()->select(\'COUNT(chat_id)\', \'chatbox_room_posts\', array( \'chat_member_id=?\', $comment->author()->member_id ) )->first(); }}
+	<li data-role="aXenNumberChatboxPlus" class="ipsType_light">
+    	{number="$aXenChatboxPlusCount"} {lang="aXenNumberChatboxPlus_topic"}
+	</li>
+{{endif}}',
+    ),
+  ),
+), parent::hookData() );
+}
+/* End Hook Data */
+
+
+}
+]]></hook></hooks><settings><setting><key>aXenNumberChatboxPlusHovercard</key><default>1</default></setting><setting><key>aXenNumberChatboxPlusProfileHeader</key><default>1</default></setting><setting><key>aXenNumberChatboxPlusTopic</key><default>1</default></setting></settings><settingsCode><![CDATA[//<?php
+
+$form->add( new \IPS\Helpers\Form\YesNo( 'aXenNumberChatboxPlusHovercard', \IPS\Settings::i()->aXenNumberChatboxPlusHovercard ) );
+$form->add( new \IPS\Helpers\Form\YesNo( 'aXenNumberChatboxPlusProfileHeader', \IPS\Settings::i()->aXenNumberChatboxPlusProfileHeader ) );
+$form->add( new \IPS\Helpers\Form\YesNo( 'aXenNumberChatboxPlusTopic', \IPS\Settings::i()->aXenNumberChatboxPlusTopic ) );
+
+if ( $values = $form->values() )
+{
+	$form->saveAsSettings();
+	return TRUE;
+}
+
+return $form;]]></settingsCode><widgets/><htmlFiles/><cssFiles/><jsFiles/><resourcesFiles/><lang><word key="aXenNumberChatboxPlusHovercard" js="0">Enable in Hovercard?</word><word key="aXenNumberChatboxPlus_title" js="0">Entries from Chatbox+</word><word key="aXenNumberChatboxPlus_topic" js="0">entries from Chatbox+</word><word key="aXenNumberChatboxPlusProfileHeader" js="0">Enable in ProfileHeader?</word><word key="aXenNumberChatboxPlusTopic" js="0">Enable in Topic?</word></lang><versions><version long="10000" human="1.0.0"><![CDATA[//<?php
+
+
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !\defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	header( ( isset( $_SERVER['SERVER_PROTOCOL'] ) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0' ) . ' 403 Forbidden' );
+	exit;
+}
+
+/**
+ * Install Code
+ */
+class ips_plugins_setup_install
+{
+	/**
+	 * ...
+	 *
+	 * @return	array	If returns TRUE, upgrader will proceed to next step. If it returns any other value, it will set this as the value of the 'extra' GET parameter and rerun this step (useful for loops)
+	 */
+	public function step1()
+	{
+		
+
+		return TRUE;
+	}
+	
+	// You can create as many additional methods (step2, step3, etc.) as is necessary.
+	// Each step will be executed in a new HTTP request
+}]]></version><version long="20000" human="2.0.0"><![CDATA[//<?php
+
+
+/* To prevent PHP errors (extending class does not exist) revealing path */
+if ( !\defined( '\IPS\SUITE_UNIQUE_KEY' ) )
+{
+	header( ( isset( $_SERVER['SERVER_PROTOCOL'] ) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0' ) . ' 403 Forbidden' );
+	exit;
+}
+
+/**
+ * 2.0.0 Upgrade Code
+ */
+class ips_plugins_setup_upg_20000
+{
+	/**
+	 * ...
+	 *
+	 * @return	array	If returns TRUE, upgrader will proceed to next step. If it returns any other value, it will set this as the value of the 'extra' GET parameter and rerun this step (useful for loops)
+	 */
+	public function step1()
+	{
+		
+
+		return TRUE;
+	}
+	
+	// You can create as many additional methods (step2, step3, etc.) as is necessary.
+	// Each step will be executed in a new HTTP request
+}]]></version></versions></plugin>
