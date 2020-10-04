@@ -4,6 +4,7 @@ Plugin displays users the number of their entries in Chatbox+ application.
 ## 📖 Table of contents
 * [Requirements](#requirements)
 * [Install](#install)
+* [Update](#update)
 
 <a name="requirements"></a>
 ## 🏷️ Requirements
@@ -23,5 +24,19 @@ Plugin displays users the number of their entries in Chatbox+ application.
     Click on the link "<b>manual upload</b>".<br />
     <img src="https://axendev.net/github/plugins/manual_upload.png" alt="Manual Upload" />
   </li>
-  <li>Select file .xml and click install button.</li>
+  <li>Select file .xml from packet and click install button.</li>
+</ol>
+
+<a name="update"></a>
+## ​🛠️​ Update
+<ol>
+  <li>
+    Go to: AdminCP -> System -> SITE FEATURES -> <b>Plugins</b>.<br />
+    <img src="https://axendev.net/github/plugins/admincp_select.png" alt="Install Plugin" />
+  </li>
+  <li>
+    Search plugin and click "<b>Upload a new version</b>".<br />
+    <img src="https://axendev.net/github/plugins/new_version_upload.png" alt="Upload a new version" />
+  </li>
+  <li>Select file .xml from packet and click install button.</li>
 </ol>
