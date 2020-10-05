@@ -2,10 +2,10 @@
 Plugin displays users the number of their entries in Chatbox+ application.
 
 ## 📖 Table of contents
-* [Requirements](#requirements)
-* [Install](#install)
-* [Update](#update)
-* [Contact](#contact)
+* [🏷️ Requirements](#requirements)
+* [🧰 Install](#install)
+* [🛠️ Update](#update)
+* [📞 Contact](#contact)
 
 <a name="requirements"></a>
 ## 🏷️ Requirements
