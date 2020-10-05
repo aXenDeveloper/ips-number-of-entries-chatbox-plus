@@ -1,11 +1,17 @@
 # (aXen) Number of entries Chatbox+
 Plugin displays users the number of their entries in Chatbox+ application.
 
+The plugin shows entries from the Chatbox+ app in:
+- Hovercard,
+- ProfileHeader,
+- Topics
+
 ## 📖 Table of contents
-* [🏷️ Requirements](#requirements)
-* [🧰 Install](#install)
-* [🛠️ Update](#update)
-* [📞 Contact](#contact)
+- [🏷️ Requirements](#requirements)
+- [🧰 Install](#install)
+- [🛠️ Update](#update)
+- [📞 Contact](#contact)
+- [🔌 Download from other sources](#download)
 
 <a name="requirements"></a>
 ## 🏷️ Requirements
@@ -44,6 +50,11 @@ Plugin displays users the number of their entries in Chatbox+ application.
 
 <a name="contact"></a>
 ## 📞 Contact support:
-
 - [GitHub](https://github.com/aXenDeveloper/ips-number-of-entries-chatbox-plus/issues),
 - [Private Message](https://invisioncommunity.com/messenger/compose/?to=580858)
+
+<a name="download"></a>
+## 🔌 Download from other sources:
+- [invisioncommunity.com](https://invisioncommunity.com/files/file/9598-axen-number-of-entries-chatbox/),
+- [invisionize.pl](https://forum.invisionize.pl/files/file/803-axen-number-of-entries-chatbox/)
+<p style="font-color: red">The resources from the links above are updated on an ongoing basis if the administration approves the file.</p>
