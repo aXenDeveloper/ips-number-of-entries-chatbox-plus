@@ -5,6 +5,7 @@ Plugin displays users the number of their entries in Chatbox+ application.
 * [Requirements](#requirements)
 * [Install](#install)
 * [Update](#update)
+* [Contact](#contact)
 
 <a name="requirements"></a>
 ## 🏷️ Requirements
@@ -28,7 +29,7 @@ Plugin displays users the number of their entries in Chatbox+ application.
 </ol>
 
 <a name="update"></a>
-## ​🛠️​ Update
+## 🛠️ Update
 <ol>
   <li>
     Go to: AdminCP -> System -> SITE FEATURES -> <b>Plugins</b>.<br />
@@ -40,3 +41,9 @@ Plugin displays users the number of their entries in Chatbox+ application.
   </li>
   <li>Select file .xml from packet and click install button.</li>
 </ol>
+
+<a name="contact"></a>
+## 📞 Contact support:
+
+- [GitHub](https://github.com/aXenDeveloper/ips-number-of-entries-chatbox-plus/issues),
+- [Private Message](https://invisioncommunity.com/messenger/compose/?to=580858)
