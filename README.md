@@ -10,7 +10,7 @@ The plugin shows entries from the Chatbox+ app in:
 - [🏷️ Requirements](#requirements)
 - [🧰 Install](#install)
 - [🛠️ Update](#update)
-- [📞 Contact](#contact)
+- [📷 Graphics](#graphics)
 - [🔌 Download from other sources](#download)
 
 <a name="requirements"></a>
@@ -48,10 +48,11 @@ The plugin shows entries from the Chatbox+ app in:
   <li>Select file .xml from packet and click install button.</li>
 </ol>
 
-<a name="contact"></a>
-## 📞 Contact support:
-- [GitHub](https://github.com/aXenDeveloper/ips-number-of-entries-chatbox-plus/issues),
-- [Private Message](https://invisioncommunity.com/messenger/compose/?to=580858)
+<a name="graphics"></a>
+## 📷 Graphics:
+<img src="https://github.com/aXenDeveloper/ips-number-of-entries-chatbox-plus/blob/main/1.png?raw=true" alt="1" />
+<img src="https://github.com/aXenDeveloper/ips-number-of-entries-chatbox-plus/blob/main/2.png?raw=true" alt="2" />
+<img src="https://github.com/aXenDeveloper/ips-number-of-entries-chatbox-plus/blob/main/3.png?raw=true" alt="3" />
 
 <a name="download"></a>
 ## 🔌 Download from other sources:
